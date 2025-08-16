@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #FF4646;
+  --primary-light: #FF6B6B10;
+  --dark: #181C29;
+  --static-white: #ffffff;
+  --static-white-20: #ffffff20;
+  --static-white-40: #ffffff40;
+  --content-background:#ECF3F8;
+  --tag-purple: #4361FF;
+  --tag-pink: #FF43F7;
+  --tag-green: #06A44F;
+  --tag-overlay: #181C2980;
 }
 
 @theme inline {
