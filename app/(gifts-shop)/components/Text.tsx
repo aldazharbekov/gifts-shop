@@ -57,7 +57,7 @@ export const Text = ({ type = "Paragraph", children }: TextProps) => {
       </p>
     ),
     ActionSmall: (
-      <p className="font-[montserrat] font-semibold text-xs leading-[1.3] text-cs-dark uppercase tracking-widest">
+      <p className="font-[montserrat] font-semibold text-xs leading-[1.3] text-inherit uppercase tracking-widest">
         {children}
       </p>
     ),
