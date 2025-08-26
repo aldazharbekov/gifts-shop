@@ -10,19 +10,24 @@ const menuItems = [
 
 export default function HeaderMenu() {
   return (
-    <nav>
-      <ul className="flex justify-center items-center gap-2">
-        {menuItems.map((item) => (
-          <li
-            key={item.label}
-            className="rounded-xl text-cs-dark hover:bg-cs-primary-light hover:text-cs-primary transition delay-75 duration-300 ease-in-out"
-          >
-            <Link href={item.href} className="block px-5 py-3">
-              <Text type="ActionSmall">{item.label}</Text>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="flex justify-end items-center self-stretch flex-1">
+      <button className="md:hidden">Menu</button>
+      <nav aria-label="Главное меню в шапке">
+        <ul className="flex justify-center items-center gap-2">
+          {menuItems.map((item) => (
+            <li
+              key={item.label}
+              className="group rounded-xl hover:bg-cs-primary-light animation"
+            >
+              <Link href={item.href} className="block px-5 py-3">
+                <Text type="ActionSmall" color="dark">
+                  {item.label}
+                </Text>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
