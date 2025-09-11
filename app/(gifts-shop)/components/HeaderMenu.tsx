@@ -12,7 +12,7 @@ export default function HeaderMenu() {
   return (
     <div className="flex justify-end items-center self-stretch flex-1">
       <button className="md:hidden">Menu</button>
-      <nav aria-label="Главное меню в шапке">
+      <nav aria-label="Главное меню в шапке" className="md:block hidden">
         <ul className="flex justify-center items-center gap-2">
           {menuItems.map((item) => (
             <li

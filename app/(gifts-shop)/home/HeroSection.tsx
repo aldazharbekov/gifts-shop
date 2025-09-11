@@ -14,10 +14,12 @@ export default function HeroSection() {
 
         <Link
           href="/gifts"
-          className="font-[montserrat] font-semibold text-xs text-cs-static-white uppercase tracking-widest px-8 py-5 bg-cs-dark rounded-2xl hover:bg-cs-static-white hover:text-cs-dark animation"
+          className="group px-8 py-5 bg-cs-dark rounded-2xl hover:bg-cs-static-white animation"
           type="button"
         >
-          Explore Magical Gifts
+          <Text type="ActionSmall" color="static-white" hov="dark">
+            Explore Magical Gifts
+          </Text>
         </Link>
         <Text type="Caption">and Happy New Year</Text>
       </div>

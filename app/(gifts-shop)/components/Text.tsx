@@ -65,7 +65,7 @@ export const Text = ({
     ),
     ActionSmall: (
       <p
-        className={`font-[montserrat] font-semibold text-xs text-cs-${color} group-hover:text-cs-${hov} uppercase tracking-widest`}
+        className={`font-[montserrat] font-semibold text-xs text-cs-${color} group-hover:text-cs-${hov} uppercase tracking-widest animation`}
       >
         {children}
       </p>
@@ -79,7 +79,7 @@ export const Text = ({
     ),
     SliderText: (
       <p
-        className={`font-[montserrat] font-semibold text-[80px] text-cs-${color}  uppercase`}
+        className={`font-[montserrat] font-semibold text-[80px] text-cs-static-white uppercase`}
       >
         {children}
       </p>
