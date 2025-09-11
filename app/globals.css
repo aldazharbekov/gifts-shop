@@ -10,6 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-cs-primary: #ff4646;
+  --color-cs-primary-light: #ff6b6b10;
+  --color-cs-dark: #181c29;
+  --color-cs-static-white: #ffffff;
+  --color-cs-static-white-20: #ffffff20;
+  --color-cs-static-white-40: #ffffff40;
+  --color-cs-content-background: #ecf3f8;
+  --color-cs-tag-purple: #4361ff;
+  --color-cs-tag-pink: #ff43f7;
+  --color-cs-tag-green: #06a44f;
+  --color-cs-tag-overlay: #181c2980;
+
+  --breakpoint-3xl: 120rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +34,7 @@
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
