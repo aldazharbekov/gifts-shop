@@ -1,22 +1,17 @@
 import AboutSection from "./AboutSection";
+import BestGiftsSection from "./BestGiftsSection";
+import CTA from "./CTA";
 import HeroSection from "./HeroSection";
 import SliderSection from "./SliderSection";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col">
       <HeroSection />
       <AboutSection />
       <SliderSection />
-
-      <section id="best-gifts">
-        {" "}
-        <div className="section-container">best-gifts</div>
-      </section>
-      <section id="cta">
-        {" "}
-        <div className="section-container">cta</div>
-      </section>
+      <BestGiftsSection />
+      <CTA />
     </div>
   );
 }
