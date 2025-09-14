@@ -4,6 +4,8 @@ import Logo from "./components/Logo";
 import "./project-globals.css";
 
 import { Allura, Montserrat } from "next/font/google";
+import ContactCards from "./components/ContactCards";
+import Socials from "./components/Socials";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,7 +36,25 @@ export default function Layout({
         </div>
       </header>
       <main className="flex-1 w-full">{children}</main>
-      <footer id="footer" className="h-16">footer</footer>
+      <footer
+        id="footer"
+        className="flex justify-center items-center w-full h-auto px-2 py-15"
+      >
+        <div className="flex flex-col justify-center items-center gap-15 w-full max-w-[1276px] h-auto">
+          <ContactCards />
+          <div className="flex flex-col justify-center items-center gap-3 w-full h-auto text-center">
+            <Socials />
+            <p className="font-[montserrat] font-normal text-base leading-[1.48] text-cs-dark">
+              &copy; Copyright 2025, All Rights Reserved
+            </p>
+            <a href="https://rs.school/" target="_blank">
+              <p className="font-[allura] w-full font-normal text-2xl text-cs-dark hover:text-cs-primary leading-[1] tracking-widest">
+                Made in Rolling Scopes School
+              </p>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

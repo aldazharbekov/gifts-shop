@@ -3,8 +3,6 @@ import Image from "next/image";
 export default function GiftCard() {
   return (
     <div className="group flex flex-col justify-between items-center w-[310px] h-[342px] bg-cs-content-background rounded-2xl cursor-pointer animation">
-      {/* <Image src="/gifts-for-work.png" alt="gifts-for-work" height={230} fill /> */}
-
       <div style={{ position: "relative", height: "230px", width: "100%" }}>
         <Image
           src="/gift-for-work.png"

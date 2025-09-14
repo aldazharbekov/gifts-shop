@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const menuItems = [
-  { href: "/home", label: "gifts" },
+  { href: "/gifts", label: "gifts" },
   { href: "/home/#about", label: "about" },
   { href: "/home/#best-gifts", label: "best" },
   { href: "#footer", label: "contacts" },
