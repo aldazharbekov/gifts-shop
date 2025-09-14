@@ -11,9 +11,11 @@ export default function AboutSection() {
       <div className="section-container flex flex-wrap md:flex-nowrap justify-between items-center bg-cs-static-white h-auto text-start rounded-2xl">
         <div className="flex h-auto px-5 md:px-15 flex-[1_1_50vw]">
           <div className="flex flex-col justify-center gap-5 w-full max-w-[426px] py-15">
-            <Text type="Caption" color="primary">
+            <p
+              className={`font-[allura] w-full font-normal text-2xl text-cs-primary leading-[1] tracking-widest`}
+            >
               About
-            </Text>
+            </p>
             <Text type="Header2" color="dark">
               Unleash your inner superhero!
             </Text>

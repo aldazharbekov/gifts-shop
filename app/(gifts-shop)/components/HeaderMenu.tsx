@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { Text } from "./Text";
 
 const menuItems = [
   { href: "/home", label: "gifts" },
-  { href: "/home", label: "about" },
-  { href: "/home", label: "best" },
-  { href: "/home", label: "contacts" },
+  { href: "/home/#about", label: "about" },
+  { href: "/home/#best-gifts", label: "best" },
+  { href: "#footer", label: "contacts" },
 ];
 
 export default function HeaderMenu() {
@@ -19,10 +18,12 @@ export default function HeaderMenu() {
               key={item.label}
               className="group rounded-xl hover:bg-cs-primary-light animation"
             >
-              <Link href={item.href} className="block px-5 py-3">
-                <Text type="ActionSmall" color="dark">
-                  {item.label}
-                </Text>
+              <Link
+                href={item.href}
+                className="font-[montserrat] font-semibold uppercase text-xs tracking-widest text-cs-dark group-hover:text-cs-primary animation block px-5 py-3 "
+                scroll
+              >
+                {item.label}
               </Link>
             </li>
           ))}

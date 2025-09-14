@@ -34,7 +34,7 @@ export default function Layout({
         </div>
       </header>
       <main className="flex-1 w-full">{children}</main>
-      <footer className="h-16">footer</footer>
+      <footer id="footer" className="h-16">footer</footer>
     </div>
   );
 }
