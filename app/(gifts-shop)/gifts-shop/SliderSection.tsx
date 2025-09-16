@@ -21,7 +21,7 @@ export default function SliderSection() {
               alt="snowman"
               width={200}
               height={200}
-              className="rounded-3xl"
+              className="rounded-[20px]"
             />
             <Text type="SliderText">Create</Text>
             <Image
@@ -29,7 +29,7 @@ export default function SliderSection() {
               alt="christmas-trees"
               width={200}
               height={200}
-              className="rounded-3xl"
+              className="rounded-[20px]"
             />
 
             <Text type="SliderText">Love</Text>
@@ -38,7 +38,7 @@ export default function SliderSection() {
               alt="christmas-tree-ball"
               width={200}
               height={200}
-              className="rounded-3xl"
+              className="rounded-[20px]"
             />
 
             <Text type="SliderText">Dream</Text>
@@ -47,12 +47,12 @@ export default function SliderSection() {
               alt="fairytale-house"
               width={200}
               height={200}
-              className="rounded-3xl"
+              className="rounded-[20px]"
             />
           </div>
         </div>
         <div className="flex justify-end items-center gap-5 w-full">
-          <button className="flex justify-center items-center w-14 h-14 rounded-2xl bg-inherit text-cs-static-white-40 border border-cs-static-white-40">
+          <button className="flex justify-center items-center w-14 h-14 rounded-[20px] bg-inherit text-cs-static-white-40 border border-cs-static-white-40">
             <svg
               width="24"
               height="24"
@@ -69,7 +69,7 @@ export default function SliderSection() {
               />
             </svg>
           </button>
-          <button className="flex justify-center items-center w-14 h-14 rounded-2xl bg-inherit text-cs-static-white border border-cs-static-white cursor-pointer hover:bg-cs-static-white hover:text-cs-primary animation">
+          <button className="flex justify-center items-center w-14 h-14 rounded-[20px] bg-inherit text-cs-static-white border border-cs-static-white cursor-pointer hover:bg-cs-static-white hover:text-cs-primary animation">
             <svg
               width="24"
               height="24"

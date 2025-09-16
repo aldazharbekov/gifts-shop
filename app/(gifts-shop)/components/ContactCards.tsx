@@ -6,7 +6,7 @@ export default function ContactCards() {
     <div className="flex flex-col md:flex-row justify-center items-center gap-3 w-full max-w-[1276px] text-center">
       <Link
         href="tel:+1234567890"
-        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-2xl cursor-pointer animation"
+        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
       >
         <Image
           src="/santa-claus.png"
@@ -23,7 +23,7 @@ export default function ContactCards() {
       </Link>
       <Link
         href="https://www.google.com/maps?q=42.87804206649229,74.67574827770231"
-        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-2xl cursor-pointer animation"
+        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
         target="_blank"
       >
         <Image
@@ -41,7 +41,7 @@ export default function ContactCards() {
       </Link>
       <Link
         href="mailto:example@domain.com?subject=Hello&body=Christmas%20shop"
-        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-2xl cursor-pointer animation"
+        className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
       >
         <Image src="/snake.png" alt="snake" width={80} height={80} />
         <p className="font-[montserrat] w-full font-semibold text-2xl leading-[1.52] text-cs-dark uppercase tracking-widest group-hover:text-cs-primary animation">

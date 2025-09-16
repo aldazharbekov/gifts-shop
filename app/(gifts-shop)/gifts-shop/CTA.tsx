@@ -6,10 +6,10 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="flex justify-center items-center w-full h-auto px-2 py-15 bg-cs-primary bg-no-repeat bg-center bg-cover rounded-b-2xl"
+      className="flex justify-center items-center w-full h-auto px-2 py-15 bg-cs-primary bg-no-repeat bg-center bg-cover rounded-b-[20px]"
       style={{ backgroundImage: "url('/bg-snow.png'), url('/bg-forest.png')" }}
     >
-      <div className="section-container flex justify-center items-center h-auto py-15 rounded-2xl">
+      <div className="section-container flex justify-center items-center h-auto py-15 rounded-[20px]">
         <div className="flex flex-col justify-center items-center gap-5 w-full max-w-[426px] h-auto py-15 text-center">
           <Text type="Header2">
             Ready to start your journey to a better version of yourself?
