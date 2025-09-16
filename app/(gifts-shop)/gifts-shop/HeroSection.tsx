@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="flex justify-center items-center w-full h-auto px-2 py-15 bg-cs-primary bg-no-repeat bg-center bg-cover rounded-t-2xl"
+      className="flex justify-center items-center w-full h-auto px-2 py-15 bg-cs-primary bg-no-repeat bg-center bg-cover rounded-t-[20px]"
       style={{ backgroundImage: "url('/bg-snow.png'), url('/bg-ball.png')" }}
     >
       <div className="flex flex-col justify-center items-center self-stretch gap-3 max-w-[426px] h-auto py-15 text-center">
