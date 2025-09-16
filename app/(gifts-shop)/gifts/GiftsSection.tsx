@@ -13,7 +13,7 @@ export default function GiftsSection() {
           <br /> harmony, and
           <br /> inner strength{" "}
         </Text>
-        <div className="flex justify-center items-center gap-0 md:gap-2 w-full text-center">
+        <div className="flex justify-center items-center gap-0 md:gap-2 w-full">
           <p className="font-[montserrat] font-semibold text-xs text-cs-static-white uppercase tracking-widest hover:bg-cs-static-white-20 animation px-2 md:px-5 py-3 rounded-xl cursor-pointer bg-cs-static-white-20">
             All
           </p>
@@ -28,7 +28,7 @@ export default function GiftsSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-start gap-3 w-full h-auto min-h-[1050px]">
+        <div className="flex flex-wrap justify-center items-start gap-3 w-full h-auto min-h-[1050px] text-start">
           <GiftCard />
           <GiftCard />
           <GiftCard />
