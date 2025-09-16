@@ -53,10 +53,38 @@ export default function SliderSection() {
         </div>
         <div className="flex justify-end items-center gap-5 w-full">
           <button className="flex justify-center items-center w-14 h-14 rounded-2xl bg-inherit text-cs-static-white-40 border border-cs-static-white-40">
-            L
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.5 12H6M6 12L12 6M6 12L12 18"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
           <button className="flex justify-center items-center w-14 h-14 rounded-2xl bg-inherit text-cs-static-white border border-cs-static-white cursor-pointer hover:bg-cs-static-white hover:text-cs-primary animation">
-            R
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
