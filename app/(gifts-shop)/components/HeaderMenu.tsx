@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const menuItems = [
+  { href: "/", label: "/" },
   { href: "/gifts", label: "gifts" },
-  { href: "/home/#about", label: "about" },
-  { href: "/home/#best-gifts", label: "best" },
+  { href: "/gifts-shop/#about", label: "about" },
+  { href: "/gifts-shop/#best-gifts", label: "best" },
   { href: "#footer", label: "contacts" },
 ];
 
