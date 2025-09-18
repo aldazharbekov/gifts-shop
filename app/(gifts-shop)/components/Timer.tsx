@@ -3,7 +3,12 @@
 import { useEffect, useState } from "react";
 
 function useCountdown(targetDate: Date) {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   function calculateTimeLeft() {
     const difference = +targetDate - +new Date();

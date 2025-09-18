@@ -1,5 +1,13 @@
 import Image from "next/image";
+import React from "react";
 import { Text } from "../components/Text";
+
+const slide = [
+  { title: "live", src: "/snowman.png" },
+  { title: "Create", src: "/christmas-trees.png" },
+  { title: "Love", src: "/christmas-tree-ball.png" },
+  { title: "Dream", src: "/fairytale-house.png" },
+];
 
 export default function SliderSection() {
   return (
@@ -15,40 +23,20 @@ export default function SliderSection() {
         </div>
         <div className="flex items-center w-full h-auto">
           <div className="flex items-center gap-5 w-auto h-auto animation">
-            <Text type="SliderText">live</Text>
-            <Image
-              src="/snowman.png"
-              alt="snowman"
-              width={200}
-              height={200}
-              className="rounded-[20px]"
-            />
-            <Text type="SliderText">Create</Text>
-            <Image
-              src="/christmas-trees.png"
-              alt="christmas-trees"
-              width={200}
-              height={200}
-              className="rounded-[20px]"
-            />
-
-            <Text type="SliderText">Love</Text>
-            <Image
-              src="/christmas-tree-ball.png"
-              alt="christmas-tree-ball"
-              width={200}
-              height={200}
-              className="rounded-[20px]"
-            />
-
-            <Text type="SliderText">Dream</Text>
-            <Image
-              src="/fairytale-house.png"
-              alt="fairytale-house"
-              width={200}
-              height={200}
-              className="rounded-[20px]"
-            />
+            {slide.map((item) => (
+              <React.Fragment key={item.src}>
+                <p className="font-[montserrat] font-semibold text-[80px] text-cs-static-white uppercase">
+                  {item.title}
+                </p>
+                <Image
+                  src={item.src}
+                  alt={item.src}
+                  width={200}
+                  height={200}
+                  className="rounded-[20px]"
+                />
+              </React.Fragment>
+            ))}
           </div>
         </div>
         <div className="flex justify-end items-center gap-5 w-full">

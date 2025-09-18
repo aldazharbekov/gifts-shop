@@ -1,5 +1,4 @@
 import GiftCard from "../components/GiftCard";
-import { Text } from "../components/Text";
 
 const categoryNames = ["All", "For work", "For health", "For harmony"];
 
@@ -11,11 +10,12 @@ export default function GiftsSection() {
       style={{ backgroundImage: "url('/bg-garland.png')" }}
     >
       <div className="section-container flex flex-col items-center gap-5 h-auto text-center">
-        <Text type="Header1">
+        <h1 className="font-[montserrat] w-full font-semibold text-[32px] leading-[1.5] text-cs-static-white  uppercase tracking-widest">
           Achieve health,
           <br /> harmony, and
           <br /> inner strength{" "}
-        </Text>
+        </h1>
+
         <div className="flex justify-center items-center gap-0 md:gap-2 w-full">
           {categoryNames.map((name, i) => (
             <p
