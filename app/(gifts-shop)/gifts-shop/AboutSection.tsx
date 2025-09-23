@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Text } from "../components/Text";
 
 export default function AboutSection() {
   return (
@@ -11,19 +10,17 @@ export default function AboutSection() {
       <div className="section-container flex flex-wrap md:flex-nowrap justify-between items-center bg-cs-static-white h-auto text-start rounded-[20px]">
         <div className="flex h-auto px-5 md:px-15 flex-[1_1_50vw]">
           <div className="flex flex-col justify-center gap-5 w-full max-w-[426px] py-15">
-            <p
-              className={`font-[allura] w-full font-normal text-2xl text-cs-primary leading-[1] tracking-widest`}
-            >
+            <p className="font-[allura] w-full font-normal text-2xl text-cs-primary leading-[1] tracking-widest">
               About
             </p>
-            <Text type="Header2" color="dark">
+            <h2 className="font-[montserrat] w-full font-semibold text-2xl leading-[1.52] text-cs-dark uppercase tracking-widest">
               Unleash your inner superhero!
-            </Text>
-            <Text color="dark">
+            </h2>
+            <p>
               This New Year marks the beginning of your journey to inner harmony
               and new strengths. We offer unique gifts that will help you
               improve your life.
-            </Text>
+            </p>
           </div>
         </div>
         <div className="flex flex-[1_1_50vw] justify-center overflow-hidden rounded-[20px]">

@@ -8,12 +8,15 @@ export default function ContactCards() {
         href="tel:+1234567890"
         className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
       >
-        <Image
-          src="/santa-claus.png"
-          alt="santa-claus"
-          width={80}
-          height={80}
-        />
+        <div className="relative w-20 h-20">
+          <Image
+            src="/santa-claus.png"
+            alt="santa-claus"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="80px"
+          />
+        </div>
         <p className="font-[montserrat] w-full font-semibold text-2xl leading-[1.52] text-cs-dark uppercase tracking-widest group-hover:text-cs-primary animation">
           +375 (29) 111-22-33
         </p>
@@ -26,12 +29,15 @@ export default function ContactCards() {
         className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
         target="_blank"
       >
-        <Image
-          src="/christmas-tree.png"
-          alt="christmas-tree"
-          width={80}
-          height={80}
-        />
+        <div className="relative w-20 h-20">
+          <Image
+            src="/christmas-tree.png"
+            alt="christmas-tree"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="80px"
+          />
+        </div>
         <p className="font-[montserrat] w-full font-semibold text-2xl leading-[1.52] text-cs-dark uppercase tracking-widest group-hover:text-cs-primary animation">
           Magic forest{" "}
         </p>
@@ -43,7 +49,15 @@ export default function ContactCards() {
         href="mailto:example@domain.com?subject=Hello&body=Christmas%20shop"
         className="group flex flex-col justify-center items-center gap-3 w-full h-auto p-5 bg-cs-content-background rounded-[20px] cursor-pointer animation"
       >
-        <Image src="/snake.png" alt="snake" width={80} height={80} />
+        <div className="relative w-20 h-20">
+          <Image
+            src="/snake.png"
+            alt="snake"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="80px"
+          />
+        </div>
         <p className="font-[montserrat] w-full font-semibold text-2xl leading-[1.52] text-cs-dark uppercase tracking-widest group-hover:text-cs-primary animation">
           gifts@magic.com
         </p>

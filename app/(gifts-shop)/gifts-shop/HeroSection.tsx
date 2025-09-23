@@ -1,5 +1,4 @@
 import ActionButton from "../components/ActionButton";
-import { Text } from "../components/Text";
 
 export default function HeroSection() {
   return (
@@ -9,10 +8,16 @@ export default function HeroSection() {
       style={{ backgroundImage: "url('/bg-snow.png'), url('/bg-ball.png')" }}
     >
       <div className="flex flex-col justify-center items-center self-stretch gap-3 max-w-[426px] h-auto py-15 text-center">
-        <Text type="Caption">Merry Christmas</Text>
-        <Text type="Header1">Gift yourself the magic of new possibilities</Text>
+        <p className="font-[allura] w-full font-normal text-2xl text-cs-static-white leading-[1] tracking-widest">
+          Merry Christmas
+        </p>
+        <h1 className="font-[montserrat] w-full font-semibold text-[32px] leading-[1.5] text-cs-static-white  uppercase tracking-widest">
+          Gift yourself the magic of new possibilities
+        </h1>
         <ActionButton />
-        <Text type="Caption">and Happy New Year</Text>
+        <p className="font-[allura] w-full font-normal text-2xl text-cs-static-white leading-[1] tracking-widest">
+          and Happy New Year
+        </p>
       </div>
     </section>
   );
