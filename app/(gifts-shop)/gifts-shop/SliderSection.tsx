@@ -42,7 +42,7 @@ export default function SliderSection() {
         console.log("sliderContainerRef.current false");
       }
 
-      let maxClick = window.innerWidth <= 768 ? 6 : 3;
+      const maxClick = window.innerWidth <= 768 ? 6 : 3;
       setMaxClick(maxClick);
 
       setClickStep((sliderWidth - sliderContainerWidth) / maxClick);
