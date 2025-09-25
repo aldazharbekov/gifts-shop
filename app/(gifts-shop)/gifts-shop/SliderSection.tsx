@@ -11,56 +11,66 @@ const slide = [
 ];
 
 export default function SliderSection() {
-  const rowRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0); // Текущее состояние клика
-  const [maxClick, setMaxClick] = useState(3); // количество кликов
-  const [slideStep, setSlideStep] = useState(0); // шаг слайда в px
-  const [sliderPosition, setSliderPosition] = useState(0); // шаг слайда в px
+  const sliderContainerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    let sliderContainer = 0;
-    if (sliderRef.current) {
-      sliderContainer = sliderRef.current.clientWidth;
-    }
-    let row = 0;
-    if (rowRef.current) {
-      row = rowRef.current.clientWidth;
-    }
-    setSlideStep((sliderContainer - row) / maxClick);
-  }, [sliderPosition]);
+  const [sliderWidth, setSliderWidth] = useState(0);
+  const [sliderContainerWidth, setSliderContainerWidth] = useState(0);
+  const [maxClick, setMaxClick] = useState(3);
+  const [clickStep, setClickStep] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [sliderPosition, setSliderPosition] = useState(0);
 
-  //1. Считаем maxClick в зависимости от ширины экрана
   useEffect(() => {
     const calculateMaxClick = () => {
       setSliderPosition(0);
       setCurrentIndex(0);
-      if (window.innerWidth <= 768) {
-        setMaxClick(6);
+
+      let sliderWidth = 0;
+      if (sliderRef.current) {
+        setSliderWidth(sliderRef.current.clientWidth);
+        sliderWidth = sliderRef.current.clientWidth;
       } else {
-        setMaxClick(3);
+        console.log("sliderRef.current false");
       }
+
+      let sliderContainerWidth = 0;
+      if (sliderContainerRef.current) {
+        setSliderContainerWidth(sliderContainerRef.current.clientWidth);
+        sliderContainerWidth = sliderContainerRef.current.clientWidth;
+      } else {
+        console.log("sliderContainerRef.current false");
+      }
+
+      let maxClick = window.innerWidth <= 768 ? 6 : 3;
+      setMaxClick(maxClick);
+
+      setClickStep((sliderWidth - sliderContainerWidth) / maxClick);
     };
+
     calculateMaxClick(); // вызов при маунте
-    // Когда компонент появился → навесили слушатель
-    window.addEventListener("resize", calculateMaxClick);
-    // Когда компонент уходит со страницы → вызывается cleanup
+
+    window.addEventListener("resize", calculateMaxClick); // Когда компонент появился → навесили слушатель
     return () => {
-      window.removeEventListener("resize", calculateMaxClick);
+      window.removeEventListener("resize", calculateMaxClick); // Когда компонент уходит со страницы → вызывается cleanup
     };
   }, []);
 
   function handlePrev() {
     if (currentIndex > 0) {
+      currentIndex === 1
+        ? setSliderPosition(0)
+        : setSliderPosition(sliderPosition - clickStep);
       setCurrentIndex(currentIndex - 1);
-      setSliderPosition(sliderPosition - slideStep);
     }
   }
 
   function handleNext() {
     if (currentIndex < maxClick) {
+      currentIndex === maxClick - 1
+        ? setSliderPosition(sliderWidth - sliderContainerWidth)
+        : setSliderPosition(sliderPosition + clickStep);
       setCurrentIndex(currentIndex + 1);
-      setSliderPosition(sliderPosition + slideStep);
     }
   }
 
@@ -81,8 +91,8 @@ export default function SliderSection() {
         </div>
 
         <div
-          ref={rowRef}
-          className="flex items-center overflow-hidden w-full h-auto"
+          ref={sliderContainerRef}
+          className="flex items-center w-full h-auto" //overflow-hidden
         >
           <div
             ref={sliderRef}
