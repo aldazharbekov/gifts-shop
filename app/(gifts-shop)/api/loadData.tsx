@@ -1,5 +1,18 @@
 // app/utils/loadData.ts
-let cachedData: any = null;
+
+type Item = {
+  name: string;
+  description: string;
+  category: string;
+  superpowers: {
+    live: string;
+    create: string;
+    love: string;
+    dream: string;
+  };
+};
+
+let cachedData: Item[] = [];
 
 export async function loadData() {
   if (cachedData) return cachedData;
