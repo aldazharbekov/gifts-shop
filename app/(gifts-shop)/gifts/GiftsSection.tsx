@@ -1,5 +1,3 @@
-import GiftCard from "../components/GiftCard";
-
 const categoryNames = ["All", "For work", "For health", "For harmony"];
 
 export default function GiftsSection() {
@@ -28,20 +26,7 @@ export default function GiftsSection() {
         </div>
 
         <div className="flex flex-wrap justify-center items-start gap-3 w-full h-auto min-h-[1050px] text-start">
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
-
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
-
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
-          <GiftCard />
+          Gift
         </div>
       </div>
     </section>
