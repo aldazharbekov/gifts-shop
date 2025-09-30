@@ -48,11 +48,11 @@ export default function SliderSection() {
       setClickStep((sliderWidth - sliderContainerWidth) / maxClick);
     };
 
-    calculateMaxClick(); // вызов при маунте
+    calculateMaxClick();
 
-    window.addEventListener("resize", calculateMaxClick); // Когда компонент появился → навесили слушатель
+    window.addEventListener("resize", calculateMaxClick);
     return () => {
-      window.removeEventListener("resize", calculateMaxClick); // Когда компонент уходит со страницы → вызывается cleanup
+      window.removeEventListener("resize", calculateMaxClick);
     };
   }, []);
 
@@ -92,7 +92,7 @@ export default function SliderSection() {
 
         <div
           ref={sliderContainerRef}
-          className="flex items-center w-full h-auto" //overflow-hidden
+          className="flex items-center w-full h-auto"
         >
           <div
             ref={sliderRef}
